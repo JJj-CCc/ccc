@@ -59,9 +59,18 @@ public class HelloController {
 
     @Autowired
     private UserMapper userMapper;
+
+
     @RequestMapping("/getuser")
     public Object getUser(Integer id){
         return  userMapper.getUserById(id);
+    }
+
+
+    @RequestMapping("/insert")
+    public Object insert(String username,String sex){
+          userMapper.insertuser(username,sex);
+          return "success";
     }
 
 }
