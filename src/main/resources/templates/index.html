@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8"/>
+<title></title>
+</head>
+<body>
+    <h2>Welcome TO this</h2>
+    <!--取名字-->
+    <h2 th:text="${name}" ></h2>
+    <!--取照片-->
+    <div>
+        <img th:src="@{/img/cet.jpg}">
+    </div>
+
+    <!--取手机号 -->
+    <input type="text" th:value="${mobile}">
+
+    <!--把list中内容显示出来-->
+    <table>
+        <tr>
+            <td>编号</td>
+        </tr>
+        <tr th:each="L:${list}">
+            <!--/注意th:each的意思-->
+            <td th:text="${L}"></td>
+
+    </table>
+</body>
+</html>
